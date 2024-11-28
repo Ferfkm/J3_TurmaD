@@ -7,7 +7,7 @@
 }
 
 body {
-  background: url(img/bg-desktop-yellow.webp);
+  background: blue;
   font-family: Tomorrow;
 }
 .cartao__conteudo {
@@ -29,7 +29,7 @@ body {
   }
   .cartao__conteudo p {
     padding: 4rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
   .cartao__conteudo h3 {
     color: var(--text-color);
@@ -54,15 +54,26 @@ body {
     transform: rotateY(180deg);
   }
   .cartao__conteudo__pergunta,
-  .cartao__conteudo__resposta{
+  .cartao__conteudo__resposta {
     backface-visibility: hidden;
     position: absolute;
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
   }
   .cartao__conteudo__resposta{
     transform: rotateY(180deg);
+    background-color: rgb(11, 187, 184, 0.5);
+    border-top: 8px solid var(--text-color);
+    border-bottom: 8px ridge red;
+    border-left: 8px inset blue;
+    border-right: 8px dotted green;
+    
   }
+  .cartao__conteudo__pergunta img{
+    height: 30%;
+  }
+
   footer {
     background-color: black;
     color: white;
@@ -76,3 +87,22 @@ body {
     font-size: 0.6rem;
     margin-top: 0.5rem;
   }
+  @media (max-width: 560px) {
+    
+    body{
+        background-color: red;    
+    }
+
+    .cartao{
+        flex: 1 0 calc(100% - 1rem);
+    }
+    
+    .cartao__conteudo h3{
+        font-size: 3vw;
+    }
+
+    .cartao__conteudo p{
+        font-size: 3.8vw;
+    }
+    
+}
